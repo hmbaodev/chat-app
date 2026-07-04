@@ -1,0 +1,41 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px var(--chat-spacing-lg);
+  border-radius: 8px;
+  font-size: var(--chat-font-size-md);
+  font-weight: var(--chat-font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+  
+  &--full {
+    width: 100%;
+  }
+
+  &--primary {
+    background-color: var(--chat-brand-clr-1);
+    color: var(--chat-white-clr-1);
+    
+    &:hover {
+      background-color: var(--chat-brand-clr-2);
+      transform: translateY(-1px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: var(--chat-black-clr-1);
+    
+    &:hover {
+      background-color: var(--chat-light-gray-clr-1);
+    }
+  }
+}

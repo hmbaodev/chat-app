@@ -1,0 +1,199 @@
+@use '../variables' as *;
+
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--chat-light-gray-clr-1);
+
+  &__left {
+    display: none;
+    flex: 1;
+    background: linear-gradient(135deg, var(--chat-brand-clr-1) 0%, var(--chat-brand-clr-2) 100%);
+    color: var(--chat-white-clr-1);
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $chat-bp-lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--chat-spacing-xl) 3rem;
+    }
+  }
+
+  &__brand {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    
+    .auth-layout__logo {
+      display: flex;
+      align-items: center;
+      gap: var(--chat-spacing-sm);
+      margin-bottom: var(--chat-spacing-xl);
+      
+      svg path {
+        fill: var(--chat-white-clr-1);
+      }
+      
+      h2 {
+        font-size: var(--chat-font-size-xl);
+        font-weight: var(--chat-font-weight-bold);
+        margin: 0;
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: var(--chat-spacing-md);
+      font-weight: var(--chat-font-weight-bold);
+    }
+
+    p {
+      font-size: var(--chat-font-size-lg);
+      opacity: 0.9;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  &__graphics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    
+    .glass-card {
+      position: absolute;
+      bottom: 20%;
+      right: -10%;
+      width: 300px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transform: rotate(-15deg);
+    }
+    
+    .glass-circle {
+      position: absolute;
+      top: -10%;
+      right: 20%;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    }
+  }
+
+  &__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--chat-spacing-lg);
+  }
+
+  &__form-container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--chat-white-clr-1);
+    padding: var(--chat-spacing-xl);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  &__form-header {
+    text-align: center;
+    margin-bottom: var(--chat-spacing-xl);
+    
+    h3 {
+      font-size: 24px;
+      font-weight: var(--chat-font-weight-bold);
+      color: var(--chat-black-clr-1);
+      margin: 0 0 var(--chat-spacing-xs) 0;
+    }
+    
+    p {
+      color: #666;
+      font-size: var(--chat-font-size-sm);
+      margin: 0;
+    }
+  }
+}
+
+.sign-in-form {
+  width: 100%;
+  
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--chat-spacing-lg);
+    font-size: var(--chat-font-size-sm);
+  }
+  
+  &__remember {
+    display: flex;
+    align-items: center;
+    gap: var(--chat-spacing-xs);
+    color: var(--chat-black-clr-1);
+    cursor: pointer;
+  }
+  
+  &__forgot {
+    color: var(--chat-brand-clr-1);
+    text-decoration: none;
+    font-weight: var(--chat-font-weight-medium);
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  &__register {
+    text-align: center;
+    margin-top: var(--chat-spacing-lg);
+    font-size: var(--chat-font-size-sm);
+    color: #666;
+    
+    a {
+      color: var(--chat-brand-clr-1);
+      text-decoration: none;
+      font-weight: var(--chat-font-weight-medium);
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__success {
+    text-align: center;
+    padding: var(--chat-spacing-md) 0;
+  }
+  
+  &__success-msg {
+    color: #10b981;
+    margin-bottom: var(--chat-spacing-md);
+    font-weight: var(--chat-font-weight-medium);
+  }
+  
+  &__success-link {
+    color: var(--chat-brand-clr-1);
+    text-decoration: none;
+    font-weight: var(--chat-font-weight-medium);
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

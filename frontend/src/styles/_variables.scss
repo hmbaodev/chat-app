@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  // Colors
+  --chat-brand-clr-1: #1A5EF7;
+  --chat-brand-clr-2: #346df1;
+  --chat-light-gray-clr-1: #F4F4F4;
+  --chat-light-gray-clr-1: #F2F2F2;
+  --chat-black-clr-1: #212121;
+  --chat-white-clr-1: #FFFFFF;
+
+  // Spacing (px)
+  --chat-spacing-xs: 4px;
+  --chat-spacing-sm: 8px;
+  --chat-spacing-md: 16px;
+  --chat-spacing-lg: 24px;
+  --chat-spacing-xl: 32px;
+
+  // Fonts
+  --chat-font-family-1: "Inter", sans-serif;
+  --chat-font-size-xs: 12px;
+  --chat-font-size-sm: 14px;
+  --chat-font-size-md: 16px;
+  --chat-font-size-lg: 18px;
+  --chat-font-size-xl: 20px;
+  --chat-font-weight-normal: 400;
+  --chat-font-weight-medium: 500;
+  --chat-font-weight-semibold: 600;
+  --chat-font-weight-bold: 700;
+
+  // Break points (Note: Cannot be CSS variables)
+}
+
+$chat-bp-md: 768px;
+$chat-bp-lg: 992px;
+$chat-bp-xl: 1200px;
